@@ -1,0 +1,355 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.25rem;
+    color: #718096;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: -12px;
+    top: 0;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.yellow {
+    color: #eab308;
+    border-color: #eab308;
+}
+
+.blue {
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.green {
+    color: #22c55e;
+    border-color: #22c55e;
+}
+
+.purple {
+    color: #a855f7;
+    border-color: #a855f7;
+}
+
+.orange {
+    color: #f97316;
+    border-color: #f97316;
+}
+
+.red {
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.content {
+    margin-left: 2rem;
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+}
+
+.content p {
+    color: #718096;
+    margin-bottom: 1rem;
+}
+
+/* Status Styles */
+.status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.in-progress {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.pending {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #22c55e;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.add-feedback-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.add-feedback-btn:hover {
+    background-color: #2563eb;
+}
+
+.add-remark-btn {
+    background-color: #10b981;
+    color: white;
+}
+
+.add-remark-btn:hover {
+    background-color: #059669;
+}
+
+/* Feedback and Remarks Lists */
+.feedback-list, .remarks-list {
+    margin-top: 1rem;
+}
+
+.feedback-item, .remark-item {
+    background-color: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-item p, .remark-item p {
+    margin: 0;
+    color: #4b5563;
+}
+
+.feedback-item small, .remark-item small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #718096;
+    font-size: 0.75rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.modal-content textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.modal-content button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.modal-content button:hover {
+    background-color: #2563eb;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #718096;
+}
+
+.close:hover {
+    color: #2d3748;
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .timeline::before {
+        left: 24px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .content {
+        margin-left: 1rem;
+    }
+}
+/* Progress Bar Styles */
+.progress-bar {
+    width: 100%;
+    height: 16px; /* Increased height */
+    background-color: #e2e8f0;
+    border-radius: 8px; /* Adjusted border radius */
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #22c55e;
+    border-radius: 8px; /* Adjusted border radius */
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px; /* Increased font size */
+    font-weight: bold;
+}
