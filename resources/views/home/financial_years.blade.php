@@ -158,7 +158,6 @@
     position: relative;
 }
 
-/* Close button */
 .close {
     position: absolute;
     top: 10px;
@@ -168,7 +167,6 @@
     color: #333;
 }
 
-/* Responsive modal width */
 @media (max-width: 992px) {
     .modal-content {
         width: 70%; /* Wider on medium screens */
@@ -180,7 +178,6 @@
         width: 90%; /* Full width on small screens */
     }
 }
-
     </style>
 </head>
 <body>
